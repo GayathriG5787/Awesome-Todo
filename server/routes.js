@@ -19,13 +19,13 @@ router.get('/todos', async (req, res) => {
 // POsT /Todos
 router.post('/todos', async (req, res) => {
     const collection = getCollection();
-    const { todo } = req.body;
+    let { todo } = req.body;
 
     if (!todo) {
         return res.status(400).json({ msg : "error no todo found" });
     }
 
-    todo = JSON.stringify(todo);
+    todo = (typeof todo === 'string') ? todo : JSON.stringify(todo);
 
     const newTodo = await collection.insertOne ({ todo, status: false });
 
