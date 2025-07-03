@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
 /* CSS RESET */
 /* 1. Use a more-intuitive box-sizing model */
 *, *::before, *::after {
@@ -48,6 +51,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* APP */
+body {
+background-color: #000d07;
+background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+color: white;
+font-family: "Rubik", sans-serif;
+}
 
 /* container */
 
@@ -80,7 +89,13 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.5rem;
 }
 
-.todo__status {
+.mutations {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.todo__status,
+.todo__delete {
     border: none;
     padding : 0;
     line-height: 1;
